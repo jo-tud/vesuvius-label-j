@@ -1,0 +1,13 @@
+{
+ "n_sites": 612,
+ "site_sha": "45eae800936c4da664f1990a42626d16051ccedf4fa069093c31350e3d643d6a",
+ "n_sites_lost_points": 0,
+ "lost": {},
+ "torn_tile": {
+  "bar_vx": 40.0,
+  "n_over": 13,
+  "max": 142.81930109274927
+ },
+ "n_nan_hecate_sites": 0,
+ "seconds": 2688.3
+}

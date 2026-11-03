@@ -1,0 +1,10 @@
+# Versions the stored results were produced with (Python 3.12). torch: a CUDA build for training, CPU is enough
+# for the checks and the scorer.
+numpy==2.2.6
+scipy==1.16.2
+zarr==3.2.1
+fsspec==2026.6.0
+aiohttp==3.14.1
+tifffile==2025.9.30
+torch==2.12.1
+matplotlib==3.11.2

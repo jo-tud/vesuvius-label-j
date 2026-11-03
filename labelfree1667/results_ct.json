@@ -1,0 +1,152 @@
+{
+ "criteria_commit": "8d697015",
+ "limit": null,
+ "near_peak_vx": 3.0,
+ "null_depth": [
+  4.0,
+  12.0
+ ],
+ "fresh_area_cm2": 415.23768256919027,
+ "n_will": 1247,
+ "n_ref": 600,
+ "S_ref": 0.7766666666666666,
+ "N_ref": 0.5133333333333333,
+ "S_will": 0.8323977546110666,
+ "N_will": 0.4659182036888532,
+ "off_scan_will": 0.0056134723336006415,
+ "off_scan_ref": 0.0,
+ "median_signed_peak_will": 0.0,
+ "median_signed_peak_ref": -0.75,
+ "CT0": {
+  "sep": 0.2633333333333333,
+  "bar": 0.15,
+  "ok": true
+ },
+ "CT1": {
+  "gap_to_ref": 0.05573108794439996,
+  "sep": 0.36647955092221335,
+  "ok": true
+ },
+ "verdict": "PASS",
+ "per_patch": {
+  "patch_0": {
+   "n": 486,
+   "area_fresh_cm2": 168.09781401557646,
+   "S": 0.8395061728395061,
+   "N": 0.4670781893004115,
+   "drop_step1": false,
+   "off_scan": 0.0,
+   "median_signed_peak": -0.75
+  },
+  "patch_1": {
+   "n": 518,
+   "area_fresh_cm2": 179.21192716101717,
+   "S": 0.8359073359073359,
+   "N": 0.46332046332046334,
+   "drop_step1": false,
+   "off_scan": 0.0,
+   "median_signed_peak": 0.5
+  },
+  "patch_2": {
+   "n": 63,
+   "area_fresh_cm2": 21.645116827479256,
+   "S": 0.8571428571428571,
+   "N": 0.3492063492063492,
+   "drop_step1": false,
+   "off_scan": 0.0,
+   "median_signed_peak": 0.25
+  },
+  "patch_3": {
+   "n": 60,
+   "area_fresh_cm2": 18.819650245684514,
+   "S": 0.8,
+   "N": 0.4166666666666667,
+   "drop_step1": false,
+   "off_scan": 0.05,
+   "median_signed_peak": -0.875
+  },
+  "patch_4": {
+   "n": 60,
+   "area_fresh_cm2": 14.488533998663797,
+   "S": 0.75,
+   "N": 0.5333333333333333,
+   "drop_step1": false,
+   "off_scan": 0.06666666666666667,
+   "median_signed_peak": -1.0
+  },
+  "patch_5": {
+   "n": 60,
+   "area_fresh_cm2": 12.974640320769048,
+   "S": 0.8333333333333334,
+   "N": 0.5833333333333334,
+   "drop_step1": false,
+   "off_scan": 0.0,
+   "median_signed_peak": 0.625
+  }
+ },
+ "per_ref": {
+  "w013": {
+   "n": 100,
+   "S": 0.8,
+   "N": 0.45
+  },
+  "w018": {
+   "n": 100,
+   "S": 0.65,
+   "N": 0.46
+  },
+  "w023": {
+   "n": 100,
+   "S": 0.82,
+   "N": 0.56
+  },
+  "w028": {
+   "n": 100,
+   "S": 0.77,
+   "N": 0.5
+  },
+  "w029": {
+   "n": 100,
+   "S": 0.8,
+   "N": 0.58
+  },
+  "w031": {
+   "n": 100,
+   "S": 0.82,
+   "N": 0.53
+  }
+ },
+ "orientation": {
+  "patch_0": {
+   "n_same_sheet": 481,
+   "frac_positive": 0.9958419958419958,
+   "flip": false
+  },
+  "patch_1": {
+   "n_same_sheet": 364,
+   "frac_positive": 0.0,
+   "flip": true
+  },
+  "patch_2": {
+   "n_same_sheet": 62,
+   "frac_positive": 0.0,
+   "flip": true
+  },
+  "patch_3": {
+   "n_same_sheet": 40,
+   "frac_positive": 1.0,
+   "flip": false
+  },
+  "patch_4": {
+   "n_same_sheet": 9,
+   "frac_positive": 1.0,
+   "flip": false
+  },
+  "patch_5": {
+   "n_same_sheet": 60,
+   "frac_positive": 0.0,
+   "flip": true
+  }
+ },
+ "runtime_s": 248.71699619293213
+}

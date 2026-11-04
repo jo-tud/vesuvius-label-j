@@ -135,7 +135,8 @@ $CPU_PY attempt4/infer4.py --folds w028    # the fold's nets and the control net
 cd .. && python check_fold.py --scroll 1667 --fold w028
 ```
 
-The stored fold outputs (`RUN_0139`, `RUN_1667`: renders, nets, net outputs) are not published yet; until they are,
+The stored outputs for PHerc. 1667 w028 are a release asset (see "Run without a GPU"). The other stored fold outputs
+(`RUN_0139`, the other 1667 segments: renders, nets, net outputs) are not published yet; for those,
 `check_fold.py` and `figure/depth_profile.py` need the folders you build with the steps above.
 
 `check_fold.py` prints L and L0 for the four nets next to the stored numbers (shell label 1.56 / 1.71 %, extruded
@@ -149,6 +150,25 @@ from this tree. The full run (all folds, the no-shift control nets `train.py --a
 
 Compute: 3D U-Net (16/32/64/128 channels), batch 16; about 4 GPU-minutes per net on 0139 (6000 steps) and 9 on 1667
 (12 000 steps) on one RTX PRO 6000; the final 20 + 24 held-out nets took 1.4 + 3.7 GPU-hours.
+
+## Run without a GPU (PHerc. 1667, w028)
+
+One file holds the stored outputs that `check_fold.py` and the figure read for w028: the four held-out nets' outputs,
+the raw CT crops around the scored spots, the per-point arrays (with hecate's output) and the level-2 meshes and
+labels (836 MB, 1.1 GB unpacked; licences in `PROVENANCE.md`). From the repository root:
+
+```
+curl -LO https://github.com/jo-tud/vesuvius-label-j/releases/download/stored-1667-w028/vesuvius-label-j-1667-w028-stored.tar.gz
+sha256sum vesuvius-label-j-1667-w028-stored.tar.gz   # cd62956d55460668a846a2f10b523ce86b9695e2ca6aef0867b4fa4f8b140c8e
+tar -xzf vesuvius-label-j-1667-w028-stored.tar.gz    # creates data/run1667 and data/pherc1667 (the default folders)
+(cd data && sha256sum -c SHA256SUMS)
+python check_fold.py --scroll 1667 --fold w028
+python figure/depth_profile.py --scroll 1667
+```
+
+No GPU and no download from the data bucket are needed; a CPU build of torch is enough. `check_fold.py` prints MATCH
+for all four nets and PASS, and the figure script prints PASS and rewrites `figure/profile_1667.json` unchanged.
+Both took under a minute on a CPU in a fresh clone with no GPU visible (`CUDA_VISIBLE_DEVICES=`).
 
 ## Limits
 
@@ -191,5 +211,5 @@ github.com/WillStevens/scrollreading).
 ## Licence
 
 Code: MIT, see `LICENSE`. The CT scans, meshes and ink labels the code reads are Vesuvius Challenge open data under
-CC BY-NC 4.0 and are not part of this repository; hecate and ink_canonical_2um are fetched from their Hugging Face
-pages under their own terms.
+CC BY-NC 4.0 and are not part of this repository (the w028 release asset carries crops of them under the same
+terms); hecate and ink_canonical_2um are fetched from their Hugging Face pages under their own terms.

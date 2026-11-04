@@ -34,8 +34,8 @@ thresholds and the scoring were fixed before the runs.
 (5 of 5 and 6 of 6). The extruded label sits on the no-depth baseline.
 
 **Label-free held-out check (PHerc. 1667).** The 24 held-out 1667 nets (12 shell, 12 extruded) were run on 415 cm²
-of newly traced PHerc. 1667 surface [credit pending] more than two sheet spacings (~54 voxels at 7.91 µm) from every
-labelled point, mostly on the same wraps as the labelled segments, with ink spots
+of newly traced PHerc. 1667 surface (uploaded by Will Stevens, see Credits) more than two sheet spacings (~54
+voxels at 7.91 µm) from every labelled point, mostly on the same wraps as the labelled segments, with ink spots
 picked by the public `ink_canonical_2um` model instead of by a person. The shell label put 0.9 % of its ink more than
 half a sheet spacing away, against 18.2 % for the extruded label (no-depth baselines 19.1 % and 18.3 %), in every
 fold. The shell label is just as low at spots the picker called blank (0.7 %), so this shows where the ink sits, not
@@ -74,7 +74,8 @@ All CT and labels are read from the public Vesuvius Challenge open-data bucket
 - hecate (control and spot lists): `hecate.py` and `hecate_9.6um.pth` from https://huggingface.co/scrollprize/hecate
   into `$HECATE_DIR`.
 - Label-free check only: `ink_canonical_2um` (https://huggingface.co/scrollprize/ink_canonical_2um,
-  `r152_3ddec_v2_l5_epoch13.ckpt`) and the fresh 1667 surface upload [credit pending], which is not redistributed here.
+  `r152_3ddec_v2_l5_epoch13.ckpt`) and the fresh 1667 surface upload by Will Stevens (see Credits), which is not
+  redistributed here.
 
 ## Install
 
@@ -155,14 +156,21 @@ Compute: 3D U-Net (16/32/64/128 channels), batch 16; about 4 GPU-minutes per net
   segments, same recipe and scoring) did not confirm the result: the shell label won 3 of 8 segments against a
   pre-set bar of 7, lost none, 1 was unclear, and 4
   were void because hecate failed the per-segment control there.
-- At full resolution (PHerc. 1667, 2.4 µm, level 0) the test has no result yet: the first try was void on every
-  segment (the nets did not fit the training labels at the pre-set bar), and the second is running (one of six
-  segments already void by the same fit control).
+- At full resolution (PHerc. 1667, 2.4 µm, level 0) the test has no result: no try reached scoring. The first was
+  void on every segment (the nets did not fit the training labels at the pre-set bar). In the second (larger
+  patches) the shell-label nets again missed the bar (fit AUC 0.713-0.737 against 0.80; 2 segments void, then
+  stopped) while the no-shift control nets fit (0.840 / 0.825). A third try showed the extruded-label net misses it
+  too (0.605), so at level 0 the fit bar from level 2 fails for both labels, not only the shell label.
 - The leak L reads only ±7.5 voxels around the labelled surface, the slab in which the shell label trains to 0
   off the shell; ink further out, on the neighbouring wraps, is not measured.
-- Measured with this small 3D U-Net on flattened stacks, not in villa's ink trainer.
+- Measured with this small 3D U-Net on flattened stacks, not shown in villa's ink trainer: two tries there, with its
+  default optimiser and with AdamW, did not fit the training labels well enough to score (ink AUC 0.61-0.63 on its
+  own training data in all eight runs, against a pre-set bar of 0.80).
 - No consistent change in ink detection and no new letters: this is about keeping ink on the labelled sheet.
-- On 1667 the nets needed 12 000 steps; at 6000 they under-fit the labels.
+- On 1667 the nets needed 12 000 steps; at 6000 they under-fit the labels. The second 1667 try trained one segment's
+  nets first and went on only if they passed the fit bar; that gate was checked against the frozen criteria by a
+  second person only after the score (a retrospective check: it could not pick segments, seeds or reruns, and the
+  scorer was unchanged).
 - `points0139/run.py` also samples two community 3D ink fields for a comparison, through the `ufsm` reader
   (https://github.com/SuperOptimizer/ufsm) in Docker (image name in `UFSM_IMAGE`, default `ufsm`); it does not run without that image.
 - The label-free check needs the fresh surface upload, which this repository does not include. Its prep
@@ -176,8 +184,9 @@ Compute: 3D U-Net (16/32/64/128 channels), batch 16; about 4 GPU-minutes per net
 
 hecate (the 3D ink model used as a check) and villa (`ink_detection` native 3D training, and the sheet finder in
 `shared/pr2368_band.py`, MIT, see `THIRD_PARTY.md`) by the Vesuvius Challenge and its community; the PHerc. 0139
-and PHerc. 1667 ink labels from the Vesuvius Challenge open-data release 20260918; the fresh PHerc. 1667 surface by
-[credit pending].
+and PHerc. 1667 ink labels from the Vesuvius Challenge open-data release 20260918; the fresh PHerc. 1667 surface:
+PHerc1667 segments uploaded by Will Stevens (dl.ash2txt.org community-uploads/will, 2026-10-31;
+github.com/WillStevens/scrollreading).
 
 ## Licence
 

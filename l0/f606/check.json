@@ -1,0 +1,257 @@
+{
+ "task": "VES-3663",
+ "parent_finding": "F-567",
+ "fold": "w029",
+ "scan": "PHerc1667 20251217075048 level 0 (2.403 um, 77 keV, 0.2 m)",
+ "normal": "forward",
+ "depth": "+-31.5 vx (64 planes)",
+ "fit_bar": 0.6961308035548334,
+ "seed_noise": 0.011575894,
+ "win_gap": 0.023151788,
+ "gates": {
+  "power": true,
+  "full_draw": true
+ },
+ "controls": {
+  "checks": {
+   "scorer": {
+    "L_at_0": 0.0,
+    "L_at_pitch": 1.0,
+    "n_in_window": 181,
+    "n_planes": 64,
+    "ok": true
+   },
+   "pc_hecate": {
+    "L": 0.067834485172485,
+    "L0": 0.24386370566992882,
+    "ink_auc": 0.8763180880369168,
+    "ok": true
+   },
+   "ok": true
+  },
+  "fold_controls": {
+   "pc_hecate": {
+    "L": 0.06533520516596773,
+    "L0": 0.28281660457083396,
+    "ink_auc": 0.8946947612680868,
+    "ok": true
+   },
+   "p_control": {
+    "P0": "ARTEFACT",
+    "P1": "ARTEFACT"
+   },
+   "p_control_ok": true,
+   "ok": true
+  },
+  "c4_frozen_equal": {
+   "max_abs_diff": {
+    "J0": 0.0,
+    "J1": 0.0,
+    "D24s0": 0.0
+   },
+   "registered": {
+    "J0": true,
+    "J1": true,
+    "D24s0": true
+   },
+   "ok": true
+  },
+  "J0_frame": "FOLLOWS",
+  "J0_frame_e": {
+   "-16": -1.5423352666367043,
+   "16": 2.921469557328444
+  },
+  "seed_noise_equals_F545": true,
+  "ok": true
+ },
+ "synthetic": {
+  "cases": {
+   "read_read": {
+    "want": "READ",
+    "got": "READ",
+    "ok": true
+   },
+   "read_not_trained": {
+    "want": "NOT-RUN",
+    "got": "NOT-RUN",
+    "ok": true
+   },
+   "read_only12_read": {
+    "want": "READ",
+    "got": "READ",
+    "ok": true
+   },
+   "read_only12_extra_net": {
+    "want": "VOID",
+    "got": "VOID",
+    "ok": true
+   },
+   "read_no_infer": {
+    "want": "VOID",
+    "got": "VOID",
+    "ok": true
+   },
+   "read_budget_stop": {
+    "want": "NOT-RUN",
+    "got": "NOT-RUN",
+    "ok": true
+   },
+   "read_not_done": {
+    "want": "VOID",
+    "got": "VOID",
+    "ok": true
+   },
+   "read_replay_over": {
+    "want": "VOID",
+    "got": "VOID",
+    "ok": true
+   },
+   "read_replay_nan": {
+    "want": "VOID",
+    "got": "VOID",
+    "ok": true
+   },
+   "read_net_missing": {
+    "want": "VOID",
+    "got": "VOID",
+    "ok": true
+   },
+   "read_tile_missing": {
+    "want": "VOID",
+    "got": "VOID",
+    "ok": true
+   },
+   "read_tile_differs": {
+    "want": "VOID",
+    "got": "VOID",
+    "ok": true
+   },
+   "read_unregistered": {
+    "want": "VOID",
+    "got": "VOID",
+    "ok": true
+   },
+   "read_smoke": {
+    "want": "VOID",
+    "got": "VOID",
+    "ok": true
+   },
+   "read_wrong_fold": {
+    "want": "VOID",
+    "got": "VOID",
+    "ok": true
+   },
+   "read_few_sites": {
+    "want": "VOID",
+    "got": "VOID",
+    "ok": true
+   },
+   "q_win": {
+    "want": "WIN",
+    "got": "WIN",
+    "ok": true
+   },
+   "q_loss_equal": {
+    "want": "LOSS",
+    "got": "LOSS",
+    "ok": true
+   },
+   "q_loss_lower": {
+    "want": "LOSS",
+    "got": "LOSS",
+    "ok": true
+   },
+   "q_unclear": {
+    "want": "UNCLEAR",
+    "got": "UNCLEAR",
+    "ok": true
+   },
+   "q_win_edge": {
+    "want": "WIN",
+    "got": "WIN",
+    "ok": true
+   },
+   "q_void_ctrl": {
+    "want": "VOID",
+    "got": "VOID",
+    "ok": true
+   },
+   "q_void_read": {
+    "want": "VOID",
+    "got": "VOID",
+    "ok": true
+   },
+   "q_not_run": {
+    "want": "NOT-RUN",
+    "got": "NOT-RUN",
+    "ok": true
+   },
+   "q_nv_d": {
+    "want": "NO-VERDICT",
+    "got": "NO-VERDICT",
+    "ok": true
+   },
+   "q_nv_j": {
+    "want": "NO-VERDICT",
+    "got": "NO-VERDICT",
+    "ok": true
+   },
+   "november_both": {
+    "want": "M1",
+    "got": "M1",
+    "ok": true
+   },
+   "november_q1_only": {
+    "want": "M2",
+    "got": "M2",
+    "ok": true
+   },
+   "november_q1_win_q2_notrun": {
+    "want": "M2",
+    "got": "M2",
+    "ok": true
+   },
+   "november_q1_loss": {
+    "want": "M3",
+    "got": "M3",
+    "ok": true
+   },
+   "november_q1_unclear": {
+    "want": "M3",
+    "got": "M3",
+    "ok": true
+   },
+   "november_q1_void": {
+    "want": "M4",
+    "got": "M4",
+    "ok": true
+   },
+   "november_q1_nv": {
+    "want": "M4",
+    "got": "M4",
+    "ok": true
+   },
+   "november_q1_notrun": {
+    "want": "M4",
+    "got": "M4",
+    "ok": true
+   }
+  },
+  "ok": true
+ },
+ "ledger": {
+  "smoke_h": 0.0,
+  "units": [
+   {
+    "stage": "T",
+    "start": 1794212027,
+    "end": 1794227032,
+    "seconds": 15005,
+    "rc": 0
+   }
+  ],
+  "gpu_h": 4.168,
+  "cap_h": 7.0
+ },
+ "check_ok": true
+}

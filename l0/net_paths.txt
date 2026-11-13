@@ -1,0 +1,10 @@
+# released weight name -> path under LABELJ_DATA where the F-567 step-2 scorer checks that the net exists
+# (score_s2.trained: <run>/heldout/net_<n>_h<fold>.pt); repeat.sh copies weights/<name>.pt there
+J0-heldout-w013 ves3416/run/heldout/net_J0_hw013.pt
+J0-heldout-w018 ves3416/run/heldout/net_J0_hw018.pt
+J0-heldout-w023 ves3416/run/heldout/net_J0_hw023.pt
+J0-heldout-w028 ves3416/run/heldout/net_J0_hw028.pt
+D0-heldout-w013 ves3416/run/heldout/net_D0_hw013.pt
+D0-heldout-w018 ves3416/run/heldout/net_D0_hw018.pt
+D0-heldout-w023 ves3416/run/heldout/net_D0_hw023.pt
+D0-heldout-w028 ves3416/run/heldout/net_D0_hw028.pt

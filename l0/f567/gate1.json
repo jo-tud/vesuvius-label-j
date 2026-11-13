@@ -1,0 +1,20 @@
+{
+ "net": "D0_hw029",
+ "fit_auc_shell": 0.9125096719341601,
+ "P0_on_draw": 0.7261308035548334,
+ "bar": 0.6961308035548334,
+ "margin": 0.21637886837932674,
+ "registered": true,
+ "fit_ok": true,
+ "passed": true,
+ "baselines": {
+  "chance": 0.5,
+  "F560_D0_w029_12k": 0.6869,
+  "F496_D0_w028": 0.605,
+  "J0_w029": 0.737,
+  "J1_w029": 0.713,
+  "P0_on_w029": 0.7261308035548334
+ },
+ "seconds": 15025.0,
+ "gpu": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition"
+}

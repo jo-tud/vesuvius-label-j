@@ -1,0 +1,340 @@
+{
+ "J0-heldout-w013": {
+  "source": "ves3416/run/heldout/net_J0_hw013.pt",
+  "sha256": "4fd2b37ed3bc8158de96763e06285de40d897ebe1fce982ef975db47a18c0f1a",
+  "fold_held_out": "w013",
+  "arm": "J",
+  "seed": 0,
+  "steps": 12000,
+  "fit_auc_shell": 0.811759168921276,
+  "kept_segments": [
+   "w018",
+   "w023",
+   "w028",
+   "w029",
+   "w031"
+  ],
+  "norm": {
+   "mean": 70.88895242691531,
+   "std": 42.72464775254539
+  },
+  "replay_sites": [
+   0,
+   1,
+   2,
+   3
+  ]
+ },
+ "J0-heldout-w018": {
+  "source": "ves3416/run/heldout/net_J0_hw018.pt",
+  "sha256": "028e20fa20aa5c248af27b174ee1ccc29db2b00a7441c4a947c1921a5c5dee54",
+  "fold_held_out": "w018",
+  "arm": "J",
+  "seed": 0,
+  "steps": 12000,
+  "fit_auc_shell": 0.833336908125853,
+  "kept_segments": [
+   "w013",
+   "w023",
+   "w028",
+   "w029",
+   "w031"
+  ],
+  "norm": {
+   "mean": 70.49434206855518,
+   "std": 42.61725942698318
+  },
+  "replay_sites": [
+   320,
+   321,
+   322,
+   323
+  ]
+ },
+ "J0-heldout-w023": {
+  "source": "ves3416/run/heldout/net_J0_hw023.pt",
+  "sha256": "4c317d021869d8aeb01583ddc70480b360dc5c20722da3e550accc3b1f40dd53",
+  "fold_held_out": "w023",
+  "arm": "J",
+  "seed": 0,
+  "steps": 12000,
+  "fit_auc_shell": 0.7434219003525933,
+  "kept_segments": [
+   "w013",
+   "w018",
+   "w028",
+   "w029",
+   "w031"
+  ],
+  "norm": {
+   "mean": 70.3327428316178,
+   "std": 42.60516779690608
+  },
+  "replay_sites": [
+   640,
+   641,
+   642,
+   643
+  ]
+ },
+ "J0-heldout-w028": {
+  "source": "ves2578/step1a2/heldout/net_J0_hw028.pt",
+  "sha256": "47940f389842b8a01f13bf551e3d2950ffd4894b5b1db7e811a49323fedc743d",
+  "fold_held_out": "w028",
+  "arm": "J",
+  "seed": 0,
+  "steps": 12000,
+  "fit_auc_shell": 0.7273553639041699,
+  "kept_segments": [
+   "w013",
+   "w018",
+   "w023",
+   "w029",
+   "w031"
+  ],
+  "norm": {
+   "mean": 70.03953724231246,
+   "std": 42.64920895390127
+  },
+  "replay_sites": [
+   960,
+   961,
+   962,
+   963
+  ]
+ },
+ "J0-heldout-w029": {
+  "source": "ves2578/step1a2/heldout/net_J0_hw029.pt",
+  "sha256": "1896df66a2a75309eb5c95e47a80be066e973aa48f73843334565e38069926eb",
+  "fold_held_out": "w029",
+  "arm": "J",
+  "seed": 0,
+  "steps": 12000,
+  "fit_auc_shell": 0.7366994628823876,
+  "kept_segments": [
+   "w013",
+   "w018",
+   "w023",
+   "w028",
+   "w031"
+  ],
+  "norm": {
+   "mean": 69.56632164504653,
+   "std": 42.243645273196236
+  },
+  "replay_sites": [
+   1280,
+   1281,
+   1282,
+   1283
+  ]
+ },
+ "J1-heldout-w029": {
+  "source": "ves2578/step1a2/heldout/net_J1_hw029.pt",
+  "sha256": "b1ec68197b376417bee177331e4f24b1b2fac6b4284ddc69ab40e99ee4383022",
+  "fold_held_out": "w029",
+  "arm": "J",
+  "seed": 1,
+  "steps": 12000,
+  "fit_auc_shell": 0.7126661809754368,
+  "kept_segments": [
+   "w013",
+   "w018",
+   "w023",
+   "w028",
+   "w031"
+  ],
+  "norm": {
+   "mean": 69.56632164504653,
+   "std": 42.243645273196236
+  },
+  "replay_sites": [
+   1280,
+   1281,
+   1282,
+   1283
+  ]
+ },
+ "D0-heldout-w013": {
+  "source": "ves3416/run/heldout/net_D0_hw013.pt",
+  "sha256": "7c3cfe799e716910a8dd50d367b91d9db25918deaabe20ef01d19d28144d2176",
+  "fold_held_out": "w013",
+  "arm": "D",
+  "seed": 0,
+  "steps": 24000,
+  "fit_auc_shell": 0.7524806162022782,
+  "kept_segments": [
+   "w018",
+   "w023",
+   "w028",
+   "w029",
+   "w031"
+  ],
+  "norm": {
+   "mean": 70.88895242691531,
+   "std": 42.72464775254539
+  },
+  "replay_sites": [
+   0,
+   1,
+   2,
+   3
+  ]
+ },
+ "D0-heldout-w018": {
+  "source": "ves3416/run/heldout/net_D0_hw018.pt",
+  "sha256": "fa61ee27dd7b90ff2e66d1cdada18398e45bd8542ddcfe23c64f5ad2c676206c",
+  "fold_held_out": "w018",
+  "arm": "D",
+  "seed": 0,
+  "steps": 24000,
+  "fit_auc_shell": 0.8413207437227218,
+  "kept_segments": [
+   "w013",
+   "w023",
+   "w028",
+   "w029",
+   "w031"
+  ],
+  "norm": {
+   "mean": 70.49434206855518,
+   "std": 42.61725942698318
+  },
+  "replay_sites": [
+   320,
+   321,
+   322,
+   323
+  ]
+ },
+ "D0-heldout-w023": {
+  "source": "ves3416/run/heldout/net_D0_hw023.pt",
+  "sha256": "d3f2cdd268ab149c3657611d8086dd2c7ad4a84a685ef7f1d34cca43102f052c",
+  "fold_held_out": "w023",
+  "arm": "D",
+  "seed": 0,
+  "steps": 24000,
+  "fit_auc_shell": 0.838099509883145,
+  "kept_segments": [
+   "w013",
+   "w018",
+   "w028",
+   "w029",
+   "w031"
+  ],
+  "norm": {
+   "mean": 70.3327428316178,
+   "std": 42.60516779690608
+  },
+  "replay_sites": [
+   640,
+   641,
+   642,
+   643
+  ]
+ },
+ "D0-heldout-w028": {
+  "source": "ves3416/run/heldout/net_D0_hw028.pt",
+  "sha256": "18fd83382466d087db1e3d3b3a265fbcbfc70434628ca9d7166ee1eb65ff6fc8",
+  "fold_held_out": "w028",
+  "arm": "D",
+  "seed": 0,
+  "steps": 24000,
+  "fit_auc_shell": 0.7192732731802777,
+  "kept_segments": [
+   "w013",
+   "w018",
+   "w023",
+   "w029",
+   "w031"
+  ],
+  "norm": {
+   "mean": 70.03953724231246,
+   "std": 42.64920895390127
+  },
+  "replay_sites": [
+   960,
+   961,
+   962,
+   963
+  ]
+ },
+ "D0-heldout-w029": {
+  "source": "ves3380/run/heldout/net_D0_hw029.pt",
+  "sha256": "6b15d30d51302e24d4273a3dffa05137740f5ebcd6cfebf8ada83155b045e8d4",
+  "fold_held_out": "w029",
+  "arm": "D",
+  "seed": 0,
+  "steps": 24000,
+  "fit_auc_shell": 0.9125096719341601,
+  "kept_segments": [
+   "w013",
+   "w018",
+   "w023",
+   "w028",
+   "w031"
+  ],
+  "norm": {
+   "mean": 69.56632164504653,
+   "std": 42.243645273196236
+  },
+  "replay_sites": [
+   1280,
+   1281,
+   1282,
+   1283
+  ]
+ },
+ "D0-12k-heldout-w029": {
+  "source": "ves3347/run/heldout/net_D0_hw029.pt",
+  "sha256": "07a0afd215e7d582c8ede2cb75c5e6af4565c35dff5d276227e4f871d8cbe973",
+  "fold_held_out": "w029",
+  "arm": "D",
+  "seed": 0,
+  "steps": 12000,
+  "fit_auc_shell": 0.6869477488539589,
+  "kept_segments": [
+   "w013",
+   "w018",
+   "w023",
+   "w028",
+   "w031"
+  ],
+  "norm": {
+   "mean": 69.56632164504653,
+   "std": 42.243645273196236
+  },
+  "replay_sites": [
+   1280,
+   1281,
+   1282,
+   1283
+  ]
+ },
+ "D1-heldout-w029": {
+  "source": "ves3663/run/heldout/net_D1_hw029.pt",
+  "sha256": "c8420cb552374db69043df034deecddc7b4b1145534e38b5e55b11801271d384",
+  "fold_held_out": "w029",
+  "arm": "D",
+  "seed": 1,
+  "steps": 24000,
+  "fit_auc_shell": 0.7244632559035951,
+  "kept_segments": [
+   "w013",
+   "w018",
+   "w023",
+   "w028",
+   "w031"
+  ],
+  "norm": {
+   "mean": 69.56632164504653,
+   "std": 42.243645273196236
+  },
+  "replay_sites": [
+   1280,
+   1281,
+   1282,
+   1283
+  ]
+ }
+}

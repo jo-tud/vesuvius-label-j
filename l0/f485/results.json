@@ -1,0 +1,296 @@
+{
+ "task": "VES-2578",
+ "finding": "F-443",
+ "verdict": "PASS (attempt 2); attempt 1 FAIL on G1",
+ "G1_attempt1": {
+  "status": "FAIL",
+  "segs": {
+   "w013": {
+    "nonink": {
+     "argmax_t": -7.0,
+     "contrast": 22.72,
+     "n_used": 60,
+     "pass_": true
+    },
+    "ink": {
+     "argmax_t": -6.0,
+     "contrast": 34.02,
+     "n_used": 60,
+     "pass_": true
+    },
+    "control_n_used": 0,
+    "pitch_median_pm": 37.1
+   },
+   "w018": {
+    "nonink": {
+     "argmax_t": -7.0,
+     "contrast": 18.03,
+     "n_used": 60,
+     "pass_": true
+    },
+    "ink": {
+     "argmax_t": -11.0,
+     "contrast": 14.71,
+     "n_used": 60,
+     "pass_": false
+    },
+    "control_n_used": 0,
+    "pitch_median_pm": 44.1
+   },
+   "w023": {
+    "nonink": {
+     "argmax_t": -11.0,
+     "contrast": 12.98,
+     "n_used": 60,
+     "pass_": false
+    },
+    "ink": {
+     "argmax_t": -7.0,
+     "contrast": 25.18,
+     "n_used": 60,
+     "pass_": true
+    },
+    "control_n_used": 0,
+    "pitch_median_pm": 41.4
+   },
+   "w028": {
+    "nonink": {
+     "argmax_t": -8.0,
+     "contrast": 17.26,
+     "n_used": 60,
+     "pass_": true
+    },
+    "ink": {
+     "argmax_t": -6.0,
+     "contrast": 14.3,
+     "n_used": 60,
+     "pass_": false
+    },
+    "control_n_used": 0,
+    "pitch_median_pm": 35.8
+   },
+   "w029": {
+    "nonink": {
+     "argmax_t": 4.0,
+     "contrast": 19.65,
+     "n_used": 60,
+     "pass_": true
+    },
+    "ink": {
+     "argmax_t": -5.0,
+     "contrast": 30.79,
+     "n_used": 60,
+     "pass_": true
+    },
+    "control_n_used": 0,
+    "pitch_median_pm": 40.0
+   },
+   "w031": {
+    "nonink": {
+     "argmax_t": -6.0,
+     "contrast": 28.74,
+     "n_used": 57,
+     "pass_": true
+    },
+    "ink": {
+     "argmax_t": -1.0,
+     "contrast": 32.15,
+     "n_used": 60,
+     "pass_": true
+    },
+    "control_n_used": 0,
+    "pitch_median_pm": 41.4
+   }
+  }
+ },
+ "G1_attempt2": {
+  "status": "PASS",
+  "segs": {
+   "w013": {
+    "nonink": {
+     "argmax_t": -9.0,
+     "contrast": 29.82,
+     "n_used": 60,
+     "pass_": true
+    },
+    "ink": {
+     "argmax_t": -7.0,
+     "contrast": 40.16,
+     "n_used": 60,
+     "pass_": true
+    },
+    "control_n_used": 0,
+    "pitch_median_pm": 36.8
+   },
+   "w018": {
+    "nonink": {
+     "argmax_t": -6.0,
+     "contrast": 33.64,
+     "n_used": 60,
+     "pass_": true
+    },
+    "ink": {
+     "argmax_t": -11.0,
+     "contrast": 30.71,
+     "n_used": 60,
+     "pass_": true
+    },
+    "control_n_used": 0,
+    "pitch_median_pm": 36.6
+   },
+   "w023": {
+    "nonink": {
+     "argmax_t": -4.0,
+     "contrast": 30.55,
+     "n_used": 60,
+     "pass_": true
+    },
+    "ink": {
+     "argmax_t": -9.0,
+     "contrast": 49.55,
+     "n_used": 60,
+     "pass_": true
+    },
+    "control_n_used": 0,
+    "pitch_median_pm": 35.3
+   },
+   "w028": {
+    "nonink": {
+     "argmax_t": -1.0,
+     "contrast": 25.36,
+     "n_used": 60,
+     "pass_": true
+    },
+    "ink": {
+     "argmax_t": -11.0,
+     "contrast": 21.43,
+     "n_used": 60,
+     "pass_": true
+    },
+    "control_n_used": 0,
+    "pitch_median_pm": 38.2
+   },
+   "w029": {
+    "nonink": {
+     "argmax_t": -10.0,
+     "contrast": 20.07,
+     "n_used": 60,
+     "pass_": true
+    },
+    "ink": {
+     "argmax_t": -3.0,
+     "contrast": 31.5,
+     "n_used": 60,
+     "pass_": true
+    },
+    "control_n_used": 0,
+    "pitch_median_pm": 38.6
+   },
+   "w031": {
+    "nonink": {
+     "argmax_t": -5.0,
+     "contrast": 19.06,
+     "n_used": 59,
+     "pass_": true
+    },
+    "ink": {
+     "argmax_t": -3.0,
+     "contrast": 37.19,
+     "n_used": 60,
+     "pass_": true
+    },
+    "control_n_used": 0,
+    "pitch_median_pm": 45.7
+   }
+  }
+ },
+ "G2": {
+  "w013": {
+   "n_nodes": 483854,
+   "share_cos_ge_0p9": 0.9999,
+   "median_cos": 0.9994,
+   "pass_": true
+  },
+  "w018": {
+   "n_nodes": 600057,
+   "share_cos_ge_0p9": 0.9994,
+   "median_cos": 0.9992,
+   "pass_": true
+  },
+  "w023": {
+   "n_nodes": 609846,
+   "share_cos_ge_0p9": 0.9997,
+   "median_cos": 0.9992,
+   "pass_": true
+  },
+  "w028": {
+   "n_nodes": 150518,
+   "share_cos_ge_0p9": 0.9994,
+   "median_cos": 0.9995,
+   "pass_": true
+  },
+  "w029": {
+   "n_nodes": 156482,
+   "share_cos_ge_0p9": 0.999,
+   "median_cos": 0.9994,
+   "pass_": true
+  },
+  "w031": {
+   "n_nodes": 142374,
+   "share_cos_ge_0p9": 0.9984,
+   "median_cos": 0.9994,
+   "pass_": true
+  }
+ },
+ "G3": {
+  "w013": {
+   "dice_pos": 0.9949423732679592,
+   "dice_neg": 0.9961175886481091,
+   "pass": true
+  },
+  "w018": {
+   "dice_pos": 0.9947342781003128,
+   "dice_neg": 0.9971060868765704,
+   "pass": true
+  },
+  "w023": {
+   "dice_pos": 0.9950624225664072,
+   "dice_neg": 0.9969204475901596,
+   "pass": true
+  },
+  "w028": {
+   "dice_pos": 0.9947998840349727,
+   "dice_neg": 0.9962102180638454,
+   "pass": true
+  },
+  "w029": {
+   "dice_pos": 0.9943543122002687,
+   "dice_neg": 0.9956150244843706,
+   "pass": true
+  },
+  "w031": {
+   "dice_pos": 0.99320330357974,
+   "dice_neg": 0.9958114526460827,
+   "pass": true
+  }
+ },
+ "S1": {
+  "w013": 320,
+  "w018": 320,
+  "w023": 320,
+  "w028": 320,
+  "w029": 320,
+  "w031": 320
+ },
+ "S2": {
+  "chosen_patch": [
+   128,
+   32,
+   32
+  ],
+  "est_gpu_h": 3.94,
+  "bar": 6.0,
+  "source": "bench_gpu.json"
+ },
+ "reading_window_rule_on_fresh_draw": "attempt-1 rule (|t|<=4) on the attempt-2 draw, from the stored 4-step profiles: w031 non-ink contrast ~13.8 < 15; draw-to-draw change up to ~16 grey (w031 30.2 -> 13.8, w023 13.1 -> 25.9)"
+}

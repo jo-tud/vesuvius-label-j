@@ -1,0 +1,119 @@
+{
+ "frng_seed": 22410,
+ "n_fit": 64,
+ "sets": {
+  "all6": {
+   "norm": [
+    70.30438676054362,
+    42.52466516271952
+   ],
+   "own_net": "P0",
+   "own_norm_matches_net": true,
+   "draws": {
+    "P0": {
+     "hX": "2dd04cf31b2c1ef9d9ef863d688c076d",
+     "hYM": "8a23a8072cde5d7e73a68d9400255f5c"
+    },
+    "P5_w029": {
+     "hX": "1cf4ec8788b7dde4553bee8d5d6d5a8e",
+     "hYM": "8a23a8072cde5d7e73a68d9400255f5c"
+    },
+    "P5_w028": {
+     "hX": "ca92240790441ff94c36be66d732b8c6",
+     "hYM": "8a23a8072cde5d7e73a68d9400255f5c"
+    },
+    "own_norm": {
+     "hX": "2dd04cf31b2c1ef9d9ef863d688c076d",
+     "hYM": "8a23a8072cde5d7e73a68d9400255f5c"
+    }
+   },
+   "n_pos": 4331104,
+   "n_neg": 11574704,
+   "segments": {
+    "w013": 13,
+    "w018": 14,
+    "w023": 13,
+    "w028": 8,
+    "w029": 14,
+    "w031": 2
+   },
+   "ym_norm_free": true,
+   "no_fold_patch": true
+  },
+  "w029": {
+   "norm": [
+    69.56632164504653,
+    42.243645273196236
+   ],
+   "own_net": "P5_w029",
+   "own_norm_matches_net": true,
+   "draws": {
+    "P0": {
+     "hX": "71ba6cfa5ebeb06e14c9bf54bd781590",
+     "hYM": "0d874771a2c79547ed611ad0cb1f8548"
+    },
+    "P5_w029": {
+     "hX": "5bdcc98b5d90952ff1653c802c4fc5c9",
+     "hYM": "0d874771a2c79547ed611ad0cb1f8548"
+    },
+    "P5_w028": {
+     "hX": "dbc9d06653f699478d3646ff95841689",
+     "hYM": "0d874771a2c79547ed611ad0cb1f8548"
+    },
+    "own_norm": {
+     "hX": "5bdcc98b5d90952ff1653c802c4fc5c9",
+     "hYM": "0d874771a2c79547ed611ad0cb1f8548"
+    }
+   },
+   "n_pos": 1934240,
+   "n_neg": 13634080,
+   "segments": {
+    "w013": 12,
+    "w018": 19,
+    "w023": 16,
+    "w028": 14,
+    "w031": 3
+   },
+   "ym_norm_free": true,
+   "no_fold_patch": true
+  },
+  "w028": {
+   "norm": [
+    70.03953724231246,
+    42.64920895390127
+   ],
+   "own_net": "P5_w028",
+   "own_norm_matches_net": true,
+   "draws": {
+    "P0": {
+     "hX": "563b672baa76e65b21e2f337784c000f",
+     "hYM": "d7518850feb24eed07918f3fdaeeeaed"
+    },
+    "P5_w029": {
+     "hX": "10191c383a2f7e280d3ff2c4e6762a21",
+     "hYM": "d7518850feb24eed07918f3fdaeeeaed"
+    },
+    "P5_w028": {
+     "hX": "8beac34baec4394acb026e51351b839a",
+     "hYM": "d7518850feb24eed07918f3fdaeeeaed"
+    },
+    "own_norm": {
+     "hX": "8beac34baec4394acb026e51351b839a",
+     "hYM": "d7518850feb24eed07918f3fdaeeeaed"
+    }
+   },
+   "n_pos": 2706912,
+   "n_neg": 13099072,
+   "segments": {
+    "w013": 13,
+    "w018": 22,
+    "w023": 12,
+    "w029": 11,
+    "w031": 6
+   },
+   "ym_norm_free": true,
+   "no_fold_patch": true
+  }
+ },
+ "all_pass": true
+}

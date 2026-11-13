@@ -1,0 +1,27 @@
+{
+ "sites": 12,
+ "label_sites": 6,
+ "diffs": {
+  "J0": {
+   "n": 12,
+   "max_abs_diff": 0.0
+  },
+  "J0_shift": {
+   "n": 18,
+   "max_abs_diff": 0.0
+  },
+  "D0": {
+   "n": 12,
+   "max_abs_diff": 0.0
+  },
+  "P0_shift": {
+   "n": 18,
+   "max_abs_diff": 0.0
+  },
+  "P1_shift": {
+   "n": 18,
+   "max_abs_diff": 0.0
+  }
+ },
+ "ok": true
+}

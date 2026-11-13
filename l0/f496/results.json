@@ -1,0 +1,85 @@
+{
+ "task": "VES-2890",
+ "finding": "F-496",
+ "scan": "PHerc1667 20251217075048 level 0 (2.4 um, 77 keV)",
+ "fold": "w028",
+ "bar": 0.8,
+ "D0": {
+  "status": "RAN",
+  "fit_auc_shell": 0.6047869938273039,
+  "passes": false,
+  "seconds": 8392.6,
+  "micro": 8,
+  "jit": null,
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "peak_alloc_gb": 19.28,
+  "kept_segments": [
+   "w013",
+   "w018",
+   "w023",
+   "w029",
+   "w031"
+  ]
+ },
+ "J_pilot": {
+  "status": "RAN",
+  "fit_auc_shell": 0.7573962442498938,
+  "passes": false,
+  "seconds": 8367.4,
+  "micro": 8,
+  "jit": 8,
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "peak_alloc_gb": 19.28,
+  "kept_segments": [
+   "w013",
+   "w018",
+   "w023",
+   "w029",
+   "w031"
+  ]
+ },
+ "reading": "R1",
+ "reading_text": "D0 < 0.80: the 0.80 bar does not hold at L0 patch 128 for label arms on this fold (recipe limit, not J).",
+ "baselines": {
+  "chance": 0.5,
+  "J0_hw028_jit24_F485": 0.7273553639041699,
+  "P0_all6_F485": 0.84,
+  "P1_all6_F485": 0.825,
+  "J1_hw029_jit24_F485": 0.713,
+  "J0_hw029_jit24_F485": 0.737,
+  "shell_intensity_auc_L0_F485": 0.525
+ },
+ "gpu_hours": 4.69,
+ "gpu_cap_h": 5.0,
+ "gpu_within_cap": true,
+ "ledger": [
+  {
+   "name": "bench_D0_hw028_m4",
+   "seconds": 65.7,
+   "gpu": "NVIDIA GeForce RTX 5090",
+   "micro": 4,
+   "bench": true
+  },
+  {
+   "name": "bench_D0_hw028_m8",
+   "seconds": 57.5,
+   "gpu": "NVIDIA GeForce RTX 5090",
+   "micro": 8,
+   "bench": true
+  },
+  {
+   "name": "D0_hw028",
+   "seconds": 8392.6,
+   "gpu": "NVIDIA GeForce RTX 5090",
+   "micro": 8
+  },
+  {
+   "name": "J0_hw028_jit8",
+   "seconds": 8367.4,
+   "gpu": "NVIDIA GeForce RTX 5090",
+   "micro": 8
+  }
+ ],
+ "checks_all_pass": true,
+ "heldout_reads": "none"
+}

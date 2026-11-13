@@ -1,0 +1,292 @@
+{
+ "task": "VES-3226",
+ "scan": "PHerc1667 20251217075048 level 0 (2.403 um, 77 keV, 0.2 m)",
+ "regate": {
+  "w029": {
+   "P0_on_draw": 0.7261308035548334,
+   "bar": 0.6961308035548334,
+   "nets": {
+    "J0": {
+     "fit_auc_shell": 0.7366994628823876,
+     "pass_fold_bar": true,
+     "pass_old_080": false
+    },
+    "J1": {
+     "fit_auc_shell": 0.7126661809754368,
+     "pass_fold_bar": true,
+     "pass_old_080": false
+    }
+   },
+   "all_pass": true
+  },
+  "w028": {
+   "P0_on_draw": 0.6582696527226487,
+   "bar": 0.6282696527226487,
+   "nets": {
+    "J0": {
+     "fit_auc_shell": 0.7273553639041699,
+     "pass_fold_bar": true,
+     "pass_old_080": false
+    }
+   },
+   "all_pass": true
+  }
+ },
+ "gates": {
+  "power": true,
+  "full_draw": true
+ },
+ "checks": {
+  "scorer": {
+   "L_at_0": 0.0,
+   "L_at_pitch": 1.0,
+   "n_in_window": 181,
+   "n_planes": 64,
+   "ok": true
+  },
+  "pc_hecate": {
+   "L": 0.067834485172485,
+   "L0": 0.24386370566992882,
+   "ink_auc": 0.8763180880369168,
+   "ok": true
+  },
+  "ok": true
+ },
+ "n_sites": {
+  "w029": {
+   "label": 160,
+   "N1": 160
+  },
+  "w028": {
+   "label": 160,
+   "N1": 160
+  }
+ },
+ "hecate_folds": {
+  "w029": {
+   "L": 0.06533520516596773,
+   "L0": 0.28281660457083396,
+   "ink_auc": 0.8946947612680868,
+   "ok": true
+  },
+  "w028": {
+   "L": 0.1112390453283964,
+   "L0": 0.2744747837105951,
+   "ink_auc": 0.9128335961591869,
+   "ok": true
+  }
+ },
+ "synthetic_rules": {
+  "cases": {
+   "fold_pass2": {
+    "want": "J-PASS",
+    "got": "J-PASS",
+    "ok": true
+   },
+   "fold_pass1": {
+    "want": "J-PASS",
+    "got": "J-PASS",
+    "ok": true
+   },
+   "fold_at_half": {
+    "want": "J-PASS",
+    "got": "J-PASS",
+    "ok": true
+   },
+   "fold_leak": {
+    "want": "J-LEAK",
+    "got": "J-LEAK",
+    "ok": true
+   },
+   "fold_leak_mean": {
+    "want": "J-LEAK",
+    "got": "J-LEAK",
+    "ok": true
+   },
+   "fold_artefact": {
+    "want": "ARTEFACT",
+    "got": "ARTEFACT",
+    "ok": true
+   },
+   "fold_artefact_leak": {
+    "want": "ARTEFACT",
+    "got": "ARTEFACT",
+    "ok": true
+   },
+   "fold_unclear": {
+    "want": "UNCLEAR",
+    "got": "UNCLEAR",
+    "ok": true
+   },
+   "fold_nopeak": {
+    "want": "UNCLEAR",
+    "got": "UNCLEAR",
+    "ok": true
+   },
+   "fold_nopeak_leak": {
+    "want": "J-LEAK",
+    "got": "J-LEAK",
+    "ok": true
+   },
+   "fold_ctrl_fail": {
+    "want": "VOID",
+    "got": "VOID",
+    "ok": true
+   },
+   "fold_fit_fail": {
+    "want": "VOID",
+    "got": "VOID",
+    "ok": true
+   },
+   "fold_floor_fail": {
+    "want": "NO-VERDICT",
+    "got": "NO-VERDICT",
+    "ok": true
+   },
+   "verdict_pp": {
+    "want": "PASS",
+    "got": "PASS",
+    "ok": true
+   },
+   "verdict_pl": {
+    "want": "FAIL",
+    "got": "FAIL",
+    "ok": true
+   },
+   "verdict_pa": {
+    "want": "FAIL",
+    "got": "FAIL",
+    "ok": true
+   },
+   "verdict_pu": {
+    "want": "NO-VERDICT",
+    "got": "NO-VERDICT",
+    "ok": true
+   },
+   "verdict_pv": {
+    "want": "NO-VERDICT",
+    "got": "NO-VERDICT",
+    "ok": true
+   },
+   "verdict_pn": {
+    "want": "NO-VERDICT",
+    "got": "NO-VERDICT",
+    "ok": true
+   },
+   "verdict_pr": {
+    "want": "INCOMPLETE",
+    "got": "INCOMPLETE",
+    "ok": true
+   },
+   "verdict_lr": {
+    "want": "FAIL",
+    "got": "FAIL",
+    "ok": true
+   },
+   "verdict_checks_fail": {
+    "want": "VOID",
+    "got": "VOID",
+    "ok": true
+   }
+  },
+  "ok": true
+ },
+ "synthetic_gates": {
+  "cases": {
+   "full": {
+    "want": true,
+    "got": true,
+    "ok": true
+   },
+   "w028_not_run": {
+    "want": true,
+    "got": true,
+    "ok": true
+   },
+   "extra_net": {
+    "want": false,
+    "got": false,
+    "ok": true
+   },
+   "missing_net": {
+    "want": false,
+    "got": false,
+    "ok": true
+   },
+   "missing_net_not_run": {
+    "want": false,
+    "got": false,
+    "ok": true
+   },
+   "over_tol": {
+    "want": false,
+    "got": false,
+    "ok": true
+   },
+   "nan": {
+    "want": false,
+    "got": false,
+    "ok": true
+   },
+   "wrong_site_nets": {
+    "want": false,
+    "got": false,
+    "ok": true
+   }
+  },
+  "ok": true
+ },
+ "synthetic_frame": {
+  "follow": {
+   "want": "FOLLOWS",
+   "got": "FOLLOWS",
+   "e": {
+    "-16": -3.40647946676761e-15,
+    "16": 3.6989478908333916e-15
+   },
+   "ok": true
+  },
+  "fixed": {
+   "want": "ARTEFACT",
+   "got": "ARTEFACT",
+   "e": {
+    "-16": -16.0,
+    "16": 16.0
+   },
+   "ok": true
+  },
+  "half": {
+   "want": "ARTEFACT",
+   "got": "ARTEFACT",
+   "e": {
+    "-16": -8.0,
+    "16": 8.000000000000002
+   },
+   "ok": true
+  },
+  "most": {
+   "want": "UNCLEAR",
+   "got": "UNCLEAR",
+   "e": {
+    "-16": -5.849501262240318,
+    "16": 5.84950126224032
+   },
+   "ok": true
+  },
+  "near": {
+   "want": "FOLLOWS",
+   "got": "FOLLOWS",
+   "e": {
+    "-16": -2.150498737759685,
+    "16": 2.1504987377596816
+   },
+   "ok": true
+  },
+  "flat": {
+   "want": "NO-PEAK",
+   "got": "NO-PEAK",
+   "ok": true
+  }
+ },
+ "check_ok": true
+}

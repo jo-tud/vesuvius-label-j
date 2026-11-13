@@ -116,3 +116,38 @@ Nothing from the fresh PHerc. 1667 surface upload is in the archive. Check run f
 (2026-11-04, `CUDA_VISIBLE_DEVICES=`, CPU torch): both checksums pass, `check_fold.py` prints MATCH for all four nets,
 `figure/depth_profile.py` prints PASS, the tree is unchanged, and no file outside the clone and the unpacked archive
 was read.
+
+## 2.4 µm code (`l0/`), 2026-11-13
+
+Copied from the author's working repository (study folders of findings F-485, F-538, F-545, F-567, F-606; base
+commit `7e219274`) by a script that applies only explicit, asserted replacements: absolute data paths → `LABELJ_DATA`
+(default `data/`, sub-folders keep the run names `ves<id>/`), the level-0 mesh and level-2 label folders →
+`REPO_DATA` / `DATA_1667` (the defaults of the 9.6 µm part), the Python paths in the shell scripts → `GPU_PY` /
+`CPU_PY`, and the study folder names → `f485`, `f538`, `f545`, `f567`, `f606` (F-389's helpers and F-418's 1667
+files are this repository's `shared/` and `pherc1667/`). Two stored text files had local paths in log lines
+(`f567/log_D0_hw029.txt`, `f606/infer.json`), now `$LABELJ_DATA` / `$REPO`. Not copied: the study READMEs (internal
+notes), one-off diagnostics with hard-coded paths, GPU benchmarks. No rule, threshold or number changed.
+
+One stored file differs from the study folder: `l0/f606/results.json` is the unchanged scorer's output with the
+complete GPU ledger (`gpu_h` 4.768; the study's copy, 4.168, was written before the last unit's own ledger line).
+Every other number in it is identical.
+
+`l0/f496/results.json` (added 2026-11-13, VES-3977) is a byte copy of F-496's results file (the first level-0 D net,
+fold w028, training fit only; base commit `7e219274`); the README quotes its fit 0.605.
+
+New files: `l0/repeat.sh`, `l0/check_weights.py`, `l0/weights.json`, `l0/assets.sha256`, `l0/archives.sha256`,
+`l0/net_paths.txt`,
+`l0/figure/site_figure.py` (+ its PNG and JSON).
+
+### Large files (not in git): Hugging Face model page https://huggingface.co/j6sp5r/vesuvius-label-j
+
+`l0/repeat.sh` fetches them from `https://huggingface.co/j6sp5r/vesuvius-label-j/resolve/main/<file>` (or from the folder in `LABELJ_ASSETS`) and checks
+the sha256 below (`l0/archives.sha256`) before it unpacks them.
+
+| asset | bytes | sha256 | holds |
+|---|---|---|---|
+| `label-j-1667-l0-weights.tar` | 90 439 680 | `e6cffae320ec62aeb20cc0415a9a6a8877c0a395be948001d0bf87750c1468d9` | `weights/<name>.pt` (13 nets, byte copies of the trained files), `<name>.train.json` (training record, input normalisation), `<name>.replay.npz` (outputs stored at training on 4 replay tiles), `MODEL_CARD.md`; CC BY-NC 4.0 |
+| `label-j-1667-l0-stored.tar` | 1 422 131 200 | `401ab9c891c1b282dad6352e81e1236f6cdd78bf5ee7ee9a3d9cfa58e6a15d57` | `data/ves<id>/…`: the 75 stored files the two scorers read (scored net outputs, frame-shift outputs, per-spot arrays with hecate's output, spot lists, training records, run logs), found with an open trace and a strace of both scorers; JSON / log copies with local paths replaced; `data/ves3951/replay_l0.npz`: the 20 stored CT replay tiles of the five scored segments (values unchanged); CC BY-NC 4.0, hecate outputs MIT |
+
+`l0/assets.sha256` lists all 116 files inside both archives. `l0/repeat.sh` copies 8 of the released nets to the paths
+where the step-2 scorer checks that a fold's nets exist (`l0/net_paths.txt`).

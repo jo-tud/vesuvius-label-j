@@ -1,0 +1,50 @@
+{
+ "caption": "PHerc. 1667, scan 20251217075048 at 2.4 \u00b5m (level 0). Segment w023 is held out: neither net saw its labels. One row of one labelled ink site. Colour: predicted ink probability, 0 (black) to 1 (bright), same scale for both nets. Cyan: half way to the neighbouring sheet; predicted ink (p \u2265 0.5) beyond it is off the sheet. At this site J has almost no ink at p \u2265 0.5 (52 against D's 10 886, 0.5 %); its faint band is below 0.5 and does not count. Off-sheet share L over all 160 label sites of w023: D 0.20 (no-depth baseline 0.21), J 0.05 (0.18). Ink AUC on w023: J 0.78, D 0.74.",
+ "ink_auc_fold": {
+  "D0": 0.7438668880289612,
+  "J0": 0.777187344396719
+ },
+ "fold": "w023",
+ "u": 640,
+ "site_key": [
+  "w023",
+  "label",
+  0,
+  7945,
+  22319
+ ],
+ "row": 7945,
+ "n_points_row": 17,
+ "um_per_vx": 2.403,
+ "ct_percentiles_1_99": [
+  24.0,
+  213.0
+ ],
+ "numbers": {
+  "D0": {
+   "site": {
+    "L": 0.1869208215372867,
+    "L0": 0.19031276369005687,
+    "ink_mass": 10886.132819890976,
+    "n_points": 289
+   },
+   "fold": {
+    "L": 0.2039983775466789,
+    "L0": 0.2068385883540671
+   }
+  },
+  "J0": {
+   "site": {
+    "L": 0.028978624211239843,
+    "L0": 0.2686530178540228,
+    "ink_mass": 52.438546538352966,
+    "n_points": 289
+   },
+   "fold": {
+    "L": 0.05050452405645339,
+    "L0": 0.18060800373707955
+   }
+  }
+ },
+ "note": "site L over all defined points of the site (kept here, not drawn: J ink mass at the site is far below the scorer floor); fold L from l0/f567/step2/results.json"
+}

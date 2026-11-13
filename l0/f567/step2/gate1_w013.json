@@ -1,0 +1,22 @@
+{
+ "fold": "w013",
+ "bar": 0.7055536542932558,
+ "P0_on_draw": 0.7355536542932558,
+ "nets": {
+  "J0": {
+   "fit_auc_shell": 0.811759168921276,
+   "margin": 0.10620551462802019,
+   "registered": true,
+   "fit_ok": true,
+   "seconds": 7534.7
+  },
+  "D0": {
+   "fit_auc_shell": 0.7524806162022782,
+   "margin": 0.04692696190902246,
+   "registered": true,
+   "fit_ok": true,
+   "seconds": 15487.9
+  }
+ },
+ "passed": true
+}

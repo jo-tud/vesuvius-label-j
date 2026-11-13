@@ -1,0 +1,221 @@
+{
+ "task": "VES-3380",
+ "attempt": 3,
+ "step": 1,
+ "steps_D": 24000,
+ "scan": "PHerc1667 20251217075048 level 0 (2.403 um, 77 keV, 0.2 m)",
+ "fold": "w029",
+ "gates": {
+  "power": true,
+  "full_draw": true
+ },
+ "checks": {
+  "scorer": {
+   "L_at_0": 0.0,
+   "L_at_pitch": 1.0,
+   "n_in_window": 181,
+   "n_planes": 64,
+   "ok": true
+  },
+  "pc_hecate": {
+   "L": 0.067834485172485,
+   "L0": 0.24386370566992882,
+   "ink_auc": 0.8763180880369168,
+   "ok": true
+  },
+  "ok": true
+ },
+ "n_sites": {
+  "label": 160,
+  "N1": 160
+ },
+ "controls": {
+  "pc_hecate": {
+   "L": 0.06533520516596773,
+   "L0": 0.28281660457083396,
+   "ink_auc": 0.8946947612680868,
+   "ok": true
+  },
+  "p_control": {
+   "P0": "ARTEFACT",
+   "P1": "ARTEFACT"
+  },
+  "p_control_ok": true,
+  "ok": true
+ },
+ "j_reproduces_F545": {
+  "abs_diff": {
+   "J0": {
+    "ink_auc": 0.0,
+    "L": 0.0,
+    "L0": 0.0
+   },
+   "J1": {
+    "ink_auc": 0.0,
+    "L": 0.0,
+    "L0": 0.0
+   }
+  },
+  "ok": true
+ },
+ "synthetic_rules": {
+  "cases": {
+   "fold_win": {
+    "want": "WIN",
+    "got": "WIN",
+    "ok": true
+   },
+   "fold_loss": {
+    "want": "LOSS",
+    "got": "LOSS",
+    "ok": true
+   },
+   "fold_tie_loss": {
+    "want": "LOSS",
+    "got": "LOSS",
+    "ok": true
+   },
+   "fold_mean_loss": {
+    "want": "LOSS",
+    "got": "LOSS",
+    "ok": true
+   },
+   "fold_unclear": {
+    "want": "UNCLEAR",
+    "got": "UNCLEAR",
+    "ok": true
+   },
+   "fold_artefact": {
+    "want": "ARTEFACT",
+    "got": "ARTEFACT",
+    "ok": true
+   },
+   "fold_ctrl_fail": {
+    "want": "VOID",
+    "got": "VOID",
+    "ok": true
+   },
+   "fold_fit_fail_D": {
+    "want": "VOID",
+    "got": "VOID",
+    "ok": true
+   },
+   "fold_floor_fail_D": {
+    "want": "NO-VERDICT",
+    "got": "NO-VERDICT",
+    "ok": true
+   },
+   "equiv_fold_status_2D": {
+    "want": 24,
+    "got": 24,
+    "ok": true
+   },
+   "outcome_go": {
+    "want": "GO-STEP2",
+    "got": "GO-STEP2",
+    "ok": true
+   },
+   "outcome_loss": {
+    "want": "STOP-LOSS",
+    "got": "STOP-LOSS",
+    "ok": true
+   },
+   "outcome_unclear": {
+    "want": "STOP-UNCLEAR",
+    "got": "STOP-UNCLEAR",
+    "ok": true
+   },
+   "outcome_nv": {
+    "want": "STOP-NO-VERDICT",
+    "got": "STOP-NO-VERDICT",
+    "ok": true
+   },
+   "outcome_fit": {
+    "want": "STOP-FIT",
+    "got": "STOP-FIT",
+    "ok": true
+   },
+   "outcome_void": {
+    "want": "VOID",
+    "got": "VOID",
+    "ok": true
+   },
+   "outcome_notrun": {
+    "want": "STOP-NOT-RUN",
+    "got": "STOP-NOT-RUN",
+    "ok": true
+   }
+  },
+  "ok": true
+ },
+ "synthetic_gates": {
+  "cases": {
+   "full": {
+    "want": true,
+    "got": true,
+    "ok": true
+   },
+   "budget_stop": {
+    "want": true,
+    "got": true,
+    "ok": true
+   },
+   "stop_with_tiles": {
+    "want": false,
+    "got": false,
+    "ok": true
+   },
+   "crash_no_not_run": {
+    "want": false,
+    "got": false,
+    "ok": true
+   },
+   "missing_tile": {
+    "want": false,
+    "got": false,
+    "ok": true
+   },
+   "tile_differs": {
+    "want": false,
+    "got": false,
+    "ok": true
+   },
+   "over_tol": {
+    "want": false,
+    "got": false,
+    "ok": true
+   },
+   "nan": {
+    "want": false,
+    "got": false,
+    "ok": true
+   },
+   "extra_net": {
+    "want": false,
+    "got": false,
+    "ok": true
+   },
+   "wrong_site_nets": {
+    "want": false,
+    "got": false,
+    "ok": true
+   },
+   "wrong_fold": {
+    "want": false,
+    "got": false,
+    "ok": true
+   },
+   "budget_stop_outcome": {
+    "want": "STOP-NOT-RUN",
+    "got": "STOP-NOT-RUN",
+    "ok": true
+   }
+  },
+  "ok": true
+ },
+ "bar": {
+  "P0_on_draw": 0.7261308035548334,
+  "bar": 0.6961308035548334
+ },
+ "check_ok": true
+}

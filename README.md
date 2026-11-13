@@ -59,6 +59,91 @@ how much of it is real ink.
   larger, changed set of scored spots; the first three failed for named reasons (no loss off the shell, no depth
   shift, too few scored spots).
 
+## 2.4 µm (PHerc. 1667, level 0): label J against the usual label on five held-out segments
+
+The same test at full resolution, with the nets released. In: the PHerc. 1667 scan `20251217075048` at level 0
+(2.4 µm) rendered along each labelled segment's surface normal (128 planes), and the segment's `20260918` ink labels for
+training. Out: a 3D ink probability per voxel, and at labelled ink spots the off-sheet share L with its no-depth
+baseline L0. Each net was trained without one segment and scored only on that segment. The recipe is the 9.6 µm
+one in 2.4 µm voxels: shell ±7.5 voxels, slab ±31.5 voxels (L is read over this slab), depth shift up to ±24 voxels;
+label D puts the 2D label value on all 64 slab planes with no shift.
+
+![One held-out site at 2.4 µm](l0/figure/site_w023.png)
+
+*PHerc. 1667 w023 (held out), one row of one labelled ink site, from the stored outputs; the site was picked by a
+rule fixed before drawing (the segment with the median J score, then the stored site closest to that segment's J
+score). CT along the normal, the label (J trains ink only on this shell; D on the whole column), and the two nets'
+predicted ink on the same 0-1 colour scale. Cyan: half way to the neighbouring sheet; ink beyond it counts as off the
+sheet. At this site J has almost no ink at p ≥ 0.5 (52 against D's 10 886, 0.5 %; the label in each panel); its faint
+band is below 0.5 and does not count, so the J panel shows where its weak output sits, not an off-sheet share (the
+site's own J score, used by the picking rule, rests on almost no ink). Off-sheet share L over all 160 label sites of
+w023: D 0.20 (no-depth baseline 0.21), J 0.05 (0.18); numbers in `l0/figure/site_w023.json`.*
+
+| segment (held out) | label J: off-sheet L [95 % CI] | label D: off-sheet L [95 % CI] | no-depth L0 (D) | ink AUC J / D | fit AUC J / D (bar) |
+|---|---|---|---|---|---|
+| w013 | 0.014 [0.008, 0.025] | 0.139 [0.100, 0.181] | 0.119 | 0.82 / 0.81 | 0.812 / 0.752 (0.706) |
+| w018 | 0.027 [0.018, 0.036] | 0.192 [0.157, 0.227] | 0.194 | 0.79 / 0.74 | 0.833 / 0.841 (0.676) |
+| w023 | 0.051 [0.021, 0.101] | 0.204 [0.175, 0.232] | 0.207 | 0.78 / 0.74 | 0.743 / 0.838 (0.637) |
+| w028 | 0.059 [0.041, 0.080] | 0.250 [0.224, 0.276] | 0.256 | 0.85 / 0.82 | 0.727 / 0.719 (0.628) |
+| w029 | 0.054 [0.033, 0.077] | 0.280 [0.257, 0.304] | 0.288 | 0.79 / 0.80 | 0.737 / 0.913 (0.696) |
+| **pooled**, 1 600 spots | **0.043** [0.033, 0.053] | **0.236** [0.221, 0.250] | 0.240 | 0.80 / 0.78 | |
+
+All numbers are held out and come from `l0/f567/step2/results.json` (the scorer's verdict: CONFIRMED, label J lower on
+5 of 5 scored segments). Spots: 160 labelled ink spots and 160 labelled no-ink spots per segment; L is read at the ink
+spots, ink AUC separates ink from no-ink spots (chance 0.5).
+
+- **Baselines and controls.** L0 is what a net with no depth information gives; label D sits on it (L/L0 0.98 pooled).
+  hecate, the public 3D ink model, in the same measure: L 0.068 against L0 0.244 (positive control; hecate was probably
+  trained on these labels). The scorer gets planted answers right (all ink on the sheet: L 0; one sheet away: L 1).
+- **Equal training steps** (`l0/f606/results.json`, w029 only): label D nets were trained for 24 000 steps, J
+  for 12 000. A D net trained for 12 000 steps also leaks (L 0.214 against J's 0.054; no-depth L0 0.213 and 0.259), though
+  it is under its fit bar (0.687 against 0.696); a second D seed at 24 000 steps gives L 0.246.
+- **Limits and fails.** One scroll and one scan. One seed per label on four segments (w029: two J seeds, three D
+  nets). The sixth labelled segment, w031, is void: hecate failed the per-segment positive control there, so no net
+  was trained for it. w028's J outputs had been read once before this test (only its D net is new). The fit bar of
+  the scored runs is per segment (a no-shift control net's fit on the same patches minus 0.03: 0.628-0.706); the
+  first level-0 tries used the level-2 bar of 0.80, which neither label reached at level 0 (J 0.713-0.737 on w029,
+  D 0.605 on w028; training fit, `l0/f496/results.json`, F-496), so those tries were void. Label J predicts much
+  less confident ink overall: its ink mass at p ≥ 0.5 is about 11 times smaller than D's at the same spots, and
+  counting all predicted probability its off-sheet share is 0.127 against 0.240. L measures where the ink sits, not
+  whether text becomes legible; no letters are claimed.
+- **Wall time** (one RTX PRO 6000, from `l0/f567/step2/ledger.jsonl`): a J net (12 000 steps) about 2.1 h, a D net
+  (24 000 steps) about 4.2 h, the held-out read of one segment about 0.6 h.
+
+**Weights.** 13 nets (6 label J, 7 label D), 5.9 MB each, in `label-j-1667-l0-weights.tar` on the Hugging Face
+model page https://huggingface.co/j6sp5r/vesuvius-label-j (with a model card, `weights/MODEL_CARD.md`); `l0/weights.json` lists each file's sha256, held-out segment, label, seed,
+steps and fit. Licence CC BY-NC 4.0 (trained on CC BY-NC 4.0 labels); the code is MIT.
+
+**Repeat the stored result (one command, from a fresh clone).**
+
+```
+bash l0/repeat.sh
+```
+
+It downloads the weights (90 MB) and the stored level-0 outputs (1.4 GB: the scored net outputs, per-spot arrays
+and 20 stored CT tiles) from `https://huggingface.co/j6sp5r/vesuvius-label-j/resolve/main/<file>`, checks the sha256 of both files (`l0/archives.sha256`) and
+of the 116 files inside them (`l0/assets.sha256`), reruns the two unchanged scorers (`l0/f567/step2/score_s2.py`,
+`l0/f606/score3663.py`) and requires their `results.json` to be byte-equal to the committed ones, then reruns every
+released net on its four stored CT tiles and compares with the outputs stored at training (tolerance 5e-3). From a
+fresh clone this took 6 minutes with one GPU (largest weight difference 4.9e-4); without a GPU the weight step runs
+on the CPU and takes longer. It reads no new place. If you already have the two `.tar` files, point the script at
+the folder that holds them instead of downloading:
+
+```
+export LABELJ_ASSETS=/path/to/folder   # default: https://huggingface.co/j6sp5r/vesuvius-label-j/resolve/main
+bash l0/repeat.sh
+```
+
+It stops with `repeat: FAIL (...)` and exit code 1 when a file is missing or a check fails.
+
+**Train and score from scratch.** The level-0 code is in `l0/` under the ids of the studies that ran it (the stored
+results name them): `f485/` labels, spots, renders, the net and the fold trainer (`step1/heldout/train_fold.py --fold
+<w> --arm J|D --seed <s> --steps 12000|24000`); `f496/` the first level-0 D try (fit only); `f538/` the per-segment
+fit bars; `f545/` the J reads of w028 and w029; `f567/` J against D (step 1: w029; `step2/`: w013, w018, w023, w028;
+`unit.sh <fold> J|D|R` runs one stage); `f606/` the equal-step and second-seed D nets. Paths are environment
+variables with defaults under `data/` (`LABELJ_DATA`, and `VES2578_RUN` / `VES3416_OUT` / … per study, as in the
+scripts). The full test took 25.5 GPU-hours for the four step-2 segments.
+
 ## Data it reads
 
 All CT and labels are read from the public Vesuvius Challenge open-data bucket
@@ -76,6 +161,9 @@ All CT and labels are read from the public Vesuvius Challenge open-data bucket
 - Label-free check only: `ink_canonical_2um` (https://huggingface.co/scrollprize/ink_canonical_2um,
   `r152_3ddec_v2_l5_epoch13.ckpt`) and the fresh 1667 surface upload by Will Stevens (see Credits), which is not
   redistributed here.
+- 2.4 µm (`l0/`): the same PHerc. 1667 volume at pyramid level 0, the six segments' level-0 meshes
+  (`pherc1667/fetch_meshes.py`), and their labels at level 0 (`.../ink-labels/2.399um-volume-20251217075048/20260918`,
+  `inklabels.zarr/0`, `supervision.zarr/0`; read by `l0/f485/step0_labels.py`).
 
 ## Install
 
@@ -94,9 +182,10 @@ pip install -r requirements.txt
 | `labelfree1667/` | the label-free held-out check on fresh 1667 surface |
 | `figure/` | the depth-profile figure (`depth_profile.py` from stored outputs, `plot.py` draws it) |
 | `check_fold.py` | re-scores one held-out segment from stored fold outputs and compares with `results.json` |
+| `l0/` | the 2.4 µm (level 0) test, see "2.4 µm": `repeat.sh`, `check_weights.py`, `weights.json`, `assets.sha256`, `archives.sha256`, `net_paths.txt`, `figure/`, and the study folders `f485/`, `f496/`, `f538/`, `f545/`, `f567/`, `f606/` |
 
-The stored results are `pherc0139/attempt4/results.json`, `pherc1667/attempt2/results.json` and
-`labelfree1667/results.json`. Folder names `attemptN/` are the registered tries; comments cite the author's internal task and
+The stored results are `pherc0139/attempt4/results.json`, `pherc1667/attempt2/results.json`,
+`labelfree1667/results.json`, and at 2.4 µm `l0/f567/step2/results.json` and `l0/f606/results.json`. Folder names `attemptN/` are the registered tries; comments cite the author's internal task and
 finding ids (VES-…, F-…).
 
 ## Settings (environment variables)
@@ -170,17 +259,24 @@ No GPU and no download from the data bucket are needed; a CPU build of torch is 
 for all four nets and PASS, and the figure script prints PASS and rewrites `figure/profile_1667.json` unchanged.
 Both took under a minute on a CPU in a fresh clone with no GPU visible (`CUDA_VISIBLE_DEVICES=`).
 
+## Run it with ink-sdk
+
+The label-J nets do not run in ink-sdk (tested at ink-sdk commit `2df3ab50`). They are a small 3D U-Net
+(16/32/64/128 channels) saved as a plain state dict, and ink-sdk has no lane for that architecture. The hecate lanes
+refuse the file ("Use a released Hecate inference checkpoint"). The `canonical_2um` lane runs without an error but
+loads none of the weights (0 of 58 tensors), so its output is not this model: do not use it. Use `l0/repeat.sh`,
+`check_fold.py` and the `infer4.py` scripts from this repository. An ink-sdk adapter for this U-Net would make it
+work; it does not exist yet.
+
 ## Limits
 
 - Shown on two scrolls, both at ~9.5 µm. On a third scroll that cannot be named yet, the same test (8 held-out
   segments, same recipe and scoring) did not confirm the result: the shell label won 3 of 8 segments against a
   pre-set bar of 7, lost none, 1 was unclear, and 4
   were void because hecate failed the per-segment control there.
-- At full resolution (PHerc. 1667, 2.4 µm, level 0) the test has no result: no try reached scoring. The first was
-  void on every segment (the nets did not fit the training labels at the pre-set bar). In the second (larger
-  patches) the shell-label nets again missed the bar (fit AUC 0.713-0.737 against 0.80; 2 segments void, then
-  stopped) while the no-shift control nets fit (0.840 / 0.825). A third try showed the extruded-label net misses it
-  too (0.605), so at level 0 the fit bar from level 2 fails for both labels, not only the shell label.
+- At full resolution (PHerc. 1667, 2.4 µm, level 0) label J keeps its ink on the sheet on 5 of 5 scored held-out
+  segments (pooled off-sheet L 0.043 against 0.236 for the extruded label); the sixth segment is void. See "2.4 µm"
+  above for the numbers, the fit-bar change and the limits.
 - The leak L reads only ±7.5 voxels around the labelled surface, the slab in which the shell label trains to 0
   off the shell; ink further out, on the neighbouring wraps, is not measured.
 - Measured with this small 3D U-Net on flattened stacks, not shown in villa's ink trainer: two tries there, with its
@@ -213,3 +309,8 @@ github.com/WillStevens/scrollreading).
 Code: MIT, see `LICENSE`. The CT scans, meshes and ink labels the code reads are Vesuvius Challenge open data under
 CC BY-NC 4.0 and are not part of this repository (the w028 release asset carries crops of them under the same
 terms); hecate and ink_canonical_2um are fetched from their Hugging Face pages under their own terms.
+
+The 2.4 µm weights (`label-j-1667-l0-weights.tar` on https://huggingface.co/j6sp5r/vesuvius-label-j) are released under **CC BY-NC 4.0**: they were
+trained from scratch (no pre-trained model) on the CC BY-NC 4.0 labels and CT above. The stored level-0 outputs
+(`label-j-1667-l0-stored.tar`) carry crops of the CT and hecate's outputs at the scored spots under the same terms
+(hecate: MIT). Licence and source of every input: `THIRD_PARTY.md` and `PROVENANCE.md`.

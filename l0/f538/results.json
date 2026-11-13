@@ -1,0 +1,87 @@
+{
+ "task": "VES-3199",
+ "finding": "F-538",
+ "scan": "PHerc1667 20251217075048 level 0 (2.403 um, 77 keV, 0.2 m)",
+ "metric": "fit_auc_shell (voxel AUC, 64 training patches, frng 22410, shell planes)",
+ "gates": {
+  "check_draws": true,
+  "pc_P0": true,
+  "pc_P5_w029": true,
+  "finite": true
+ },
+ "pc": {
+  "P0_all6": 0.8401846369408632,
+  "P0_ref": 0.8401817118430075,
+  "P5_w029_w029": 0.6905341055562474,
+  "P5_ref": 0.6905341055562474,
+  "tol": 0.01
+ },
+ "primary": {
+  "P0_on_w029": 0.7261308035548334,
+  "bar_F": 0.75,
+  "bar_S": 0.8
+ },
+ "reading": "F",
+ "reading_text": "P0 on the w029 5-segment fit draw <= 0.75: the gap to 0.80 is the fit-patch draw, not training on 5 segments; the 0.80 bar does not carry over to 5-segment fit sets. Bar that does: per fold, P0 on that fold's 5-segment draw (P0_on_w029 / P0_on_w028 below); a 5-segment net passes if within 0.03 below it.",
+ "matrix": {
+  "P0_on_all6": 0.8401846369408632,
+  "P5_w029_on_all6": 0.833482311554993,
+  "P5_w028_on_all6": 0.8025624424109293,
+  "P0_on_w029": 0.7261308035548334,
+  "P5_w029_on_w029": 0.6905341055562474,
+  "P5_w028_on_w029": 0.5980802107159432,
+  "P0_on_w029_norm_P5_w029": 0.7175020186370005,
+  "P0_on_w028": 0.6582696527226487,
+  "P5_w029_on_w028": 0.7272271141948251,
+  "P5_w028_on_w028": 0.687706909025432
+ },
+ "descriptive": {
+  "P0_on_w028": 0.6582696527226487,
+  "P0_all6_minus_P0_w029": 0.1141,
+  "P0_w029_minus_P5_w029": 0.0356,
+  "P0_w028_minus_P5_w028": -0.0294,
+  "P0_on_w029_norm_P5": 0.7175020186370005,
+  "draw_pos_frac": {
+   "all6": 0.2723,
+   "w029": 0.1242,
+   "w028": 0.1713
+  },
+  "draw_segments": {
+   "all6": {
+    "w013": 13,
+    "w018": 14,
+    "w023": 13,
+    "w028": 8,
+    "w029": 14,
+    "w031": 2
+   },
+   "w029": {
+    "w013": 12,
+    "w018": 19,
+    "w023": 16,
+    "w028": 14,
+    "w031": 3
+   },
+   "w028": {
+    "w013": 13,
+    "w018": 22,
+    "w023": 12,
+    "w029": 11,
+    "w031": 6
+   }
+  },
+  "note": "descriptive only, one seed per net; every patch is a P0 training patch"
+ },
+ "baselines": {
+  "chance": 0.5,
+  "P5_w029_F526": 0.6905341055562474,
+  "P5_w028_F502": 0.687706909025432,
+  "P0_F485": 0.8401817118430075,
+  "shell_intensity_auc_L0_F485": 0.525
+ },
+ "gpu": "NVIDIA GeForce RTX 5090",
+ "gpu_hours": 0.017,
+ "peak_alloc_gb": 4.84,
+ "finished_utc": "2026-11-06T05:07:56Z",
+ "heldout_reads": "none"
+}

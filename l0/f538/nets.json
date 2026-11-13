@@ -1,0 +1,8 @@
+{
+ "P0": {"pt": "$LABELJ_DATA/ves2578/step1a2/net_P0.pt",
+        "train_json": "$LABELJ_DATA/ves2578/step1a2/train_P0.json", "set": "all6"},
+ "P5_w029": {"pt": "$LABELJ_DATA/ves3092/net_J0_hw029_jit0.pt",
+             "train_json": "$LABELJ_DATA/ves3092/train_J0_hw029_jit0.json", "set": "w029"},
+ "P5_w028": {"pt": "$LABELJ_DATA/ves2929/net_J0_hw028_jit0.pt",
+             "train_json": "$LABELJ_DATA/ves2929/train_J0_hw028_jit0.json", "set": "w028"}
+}

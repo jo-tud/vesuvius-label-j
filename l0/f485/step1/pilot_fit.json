@@ -1,0 +1,41 @@
+{
+ "pilot": "step 1 attempt 2 pilot (README)",
+ "bar": 0.7,
+ "runs": {
+  "p64": {
+   "arm": "P",
+   "seed": 0,
+   "steps": 12000,
+   "batch": 16,
+   "patch": 64,
+   "fit_auc_shell": 0.6636986497823616,
+   "seconds": 2225.7,
+   "gpu": "NVIDIA GeForce RTX 5090"
+  },
+  "p128": {
+   "arm": "P",
+   "seed": 0,
+   "steps": 12000,
+   "batch": 16,
+   "patch": 128,
+   "fit_auc_shell": 0.8401817118430075,
+   "seconds": 7836.5,
+   "gpu": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+   "peak_vram_gb_unit": 54.49
+  }
+ },
+ "p64_vs_bar": "FAIL (< 0.70)",
+ "references": {
+  "p32_attempt1": 0.549,
+  "F418_level2": 0.755
+ },
+ "p128_vs_bar": "PASS (>= 0.70)",
+ "verdict": "PASS: patch is the cause; smallest passing patch = 128 (64 fails)",
+ "attempt2_cost_est": {
+  "train_runs": 25,
+  "reuse_P0p128": true,
+  "s_per_run": 7836.5,
+  "train_gpu_h": 54.4,
+  "note": "54.5 GB VRAM per run: one run at a time on gpu1 only (does not fit gpu0 32 GB, Kaggle 16 GB); inference reserve 3.26 GPU-h (attempt-1 bench) not re-measured"
+ }
+}

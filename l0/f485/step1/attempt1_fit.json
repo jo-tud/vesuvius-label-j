@@ -1,0 +1,191 @@
+{
+ "unit": "geo-ves2578-train-gpu1",
+ "exit": 0,
+ "hours": 3.38,
+ "rule": "per-fold control: J0, J1, D0, D1 fit AUC >= 0.80 (fail -> fold VOID)",
+ "runs": {
+  "D0_hw013": {
+   "fit_auc_shell": 0.665,
+   "seconds": 939.3,
+   "patch": 32
+  },
+  "D0_hw018": {
+   "fit_auc_shell": 0.65,
+   "seconds": 902.9,
+   "patch": 32
+  },
+  "D0_hw023": {
+   "fit_auc_shell": 0.496,
+   "seconds": 953.3,
+   "patch": 32
+  },
+  "D0_hw028": {
+   "fit_auc_shell": 0.539,
+   "seconds": 977.3,
+   "patch": 32
+  },
+  "D0_hw029": {
+   "fit_auc_shell": 0.653,
+   "seconds": 936.7,
+   "patch": 32
+  },
+  "D0_hw031": {
+   "fit_auc_shell": 0.6,
+   "seconds": 904.5,
+   "patch": 32
+  },
+  "D1_hw013": {
+   "fit_auc_shell": 0.628,
+   "seconds": 938.6,
+   "patch": 32
+  },
+  "D1_hw018": {
+   "fit_auc_shell": 0.535,
+   "seconds": 903.1,
+   "patch": 32
+  },
+  "D1_hw023": {
+   "fit_auc_shell": 0.478,
+   "seconds": 953.2,
+   "patch": 32
+  },
+  "D1_hw028": {
+   "fit_auc_shell": 0.486,
+   "seconds": 977.6,
+   "patch": 32
+  },
+  "D1_hw029": {
+   "fit_auc_shell": 0.568,
+   "seconds": 940.9,
+   "patch": 32
+  },
+  "D1_hw031": {
+   "fit_auc_shell": 0.608,
+   "seconds": 904.4,
+   "patch": 32
+  },
+  "J0_hw013": {
+   "fit_auc_shell": 0.53,
+   "seconds": 936.6,
+   "patch": 32
+  },
+  "J0_hw018": {
+   "fit_auc_shell": 0.659,
+   "seconds": 905.6,
+   "patch": 32
+  },
+  "J0_hw023": {
+   "fit_auc_shell": 0.574,
+   "seconds": 900.5,
+   "patch": 32
+  },
+  "J0_hw028": {
+   "fit_auc_shell": 0.419,
+   "seconds": 946.5,
+   "patch": 32
+  },
+  "J0_hw029": {
+   "fit_auc_shell": 0.531,
+   "seconds": 940.0,
+   "patch": 32
+  },
+  "J0_hw031": {
+   "fit_auc_shell": 0.543,
+   "seconds": 903.1,
+   "patch": 32
+  },
+  "J1_hw013": {
+   "fit_auc_shell": 0.53,
+   "seconds": 936.5,
+   "patch": 32
+  },
+  "J1_hw018": {
+   "fit_auc_shell": 0.613,
+   "seconds": 905.4,
+   "patch": 32
+  },
+  "J1_hw023": {
+   "fit_auc_shell": 0.556,
+   "seconds": 900.4,
+   "patch": 32
+  },
+  "J1_hw028": {
+   "fit_auc_shell": 0.444,
+   "seconds": 946.1,
+   "patch": 32
+  },
+  "J1_hw029": {
+   "fit_auc_shell": 0.511,
+   "seconds": 940.6,
+   "patch": 32
+  },
+  "J1_hw031": {
+   "fit_auc_shell": 0.535,
+   "seconds": 903.2,
+   "patch": 32
+  },
+  "P0": {
+   "fit_auc_shell": 0.549,
+   "seconds": 944.8,
+   "patch": 32
+  },
+  "P1": {
+   "fit_auc_shell": 0.587,
+   "seconds": 945.2,
+   "patch": 32
+  }
+ },
+ "f418_l2": {
+  "D0_hw013": 0.856,
+  "D0_hw018": 0.922,
+  "D0_hw023": 0.933,
+  "D0_hw028": 0.852,
+  "D0_hw029": 0.909,
+  "D0_hw031": 0.85,
+  "D1_hw013": 0.852,
+  "D1_hw018": 0.903,
+  "D1_hw023": 0.944,
+  "D1_hw028": 0.872,
+  "D1_hw029": 0.927,
+  "D1_hw031": 0.88,
+  "J0_hw013": 0.836,
+  "J0_hw018": 0.842,
+  "J0_hw023": 0.88,
+  "J0_hw028": 0.847,
+  "J0_hw029": 0.912,
+  "J0_hw031": 0.849,
+  "J1_hw013": 0.882,
+  "J1_hw018": 0.847,
+  "J1_hw023": 0.9,
+  "J1_hw028": 0.823,
+  "J1_hw029": 0.903,
+  "J1_hw031": 0.817,
+  "P0": 0.755,
+  "P1": 0.741
+ },
+ "fold_status": {
+  "w013": "VOID",
+  "w018": "VOID",
+  "w023": "VOID",
+  "w028": "VOID",
+  "w029": "VOID",
+  "w031": "VOID"
+ },
+ "model_free_checks": {
+  "shell_intensity_auc_l0": {
+   "box1": 0.525,
+   "box128": 0.536,
+   "labels_transposed": 0.503
+  },
+  "shell_intensity_auc_l2_f418": {
+   "box1": 0.538,
+   "box32": 0.555
+  },
+  "l0_block_depth_profile": {
+   "argmax_t": -7.5,
+   "shell_mean": 82.4,
+   "far_mean": 66.3,
+   "pos_minus_neg_peak": "+5..+7 grey at t 0..+16"
+  }
+ }
+}

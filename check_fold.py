@@ -18,6 +18,15 @@ STORED = {'0139': ROOT / 'pherc0139/attempt4/results.json', '1667': ROOT / 'pher
 TOL = 1e-9
 
 
+def missing_input(prog, e):
+    """Stop with a message, not a traceback, when a stored input is missing (VES-3977 audit defect 5)."""
+    sys.exit(f"{prog}: missing input {e.filename}\n"
+             "  PHerc. 1667 w028: fetch and unpack the stored outputs first (README, section \"Run without a GPU\":\n"
+             "  vesuvius-label-j-1667-w028-stored.tar.gz, unpacked in the repository root).\n"
+             "  Other segments and PHerc. 0139: their stored outputs are not published; build the data folders with the\n"
+             "  steps in the README (section \"Reproduce one held-out segment on one GPU\").")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--scroll', choices=sorted(STORED), default='1667')
@@ -47,4 +56,7 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    try:
+        main()
+    except FileNotFoundError as e:
+        missing_input('check_fold', e)

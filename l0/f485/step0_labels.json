@@ -1,0 +1,240 @@
+{
+ "segs": {
+  "w013": {
+   "shape0": [
+    41600,
+    79600
+   ],
+   "grid0": [
+    2080,
+    3980
+   ],
+   "pos_px": 15980272,
+   "neg_px": 37601153,
+   "ink_outside_sup_px": 0,
+   "valid_px": 3112880000,
+   "fetch_s": 15.8,
+   "g3": {
+    "dice_pos": 0.9949423732679592,
+    "dice_neg": 0.9961175886481091,
+    "pass": true
+   },
+   "n_label": 160,
+   "n_N1": 160,
+   "n_heldout": 320,
+   "n_old": {
+    "label": 40,
+    "N1_nonlabel": 40
+   },
+   "n_new": {
+    "label": 120,
+    "N1_nonlabel": 120
+   },
+   "points_per_site_median": {
+    "label": 286.0,
+    "N1_nonlabel": 289.0
+   },
+   "s1_fold_pass": true
+  },
+  "w018": {
+   "shape0": [
+    42380,
+    98100
+   ],
+   "grid0": [
+    2119,
+    4905
+   ],
+   "pos_px": 56536150,
+   "neg_px": 196208400,
+   "ink_outside_sup_px": 295048,
+   "valid_px": 3858656800,
+   "fetch_s": 45.9,
+   "g3": {
+    "dice_pos": 0.9947342781003128,
+    "dice_neg": 0.9971060868765704,
+    "pass": true
+   },
+   "n_label": 160,
+   "n_N1": 160,
+   "n_heldout": 320,
+   "n_old": {
+    "label": 40,
+    "N1_nonlabel": 40
+   },
+   "n_new": {
+    "label": 120,
+    "N1_nonlabel": 120
+   },
+   "points_per_site_median": {
+    "label": 287.5,
+    "N1_nonlabel": 289.0
+   },
+   "s1_fold_pass": true
+  },
+  "w023": {
+   "shape0": [
+    41860,
+    102360
+   ],
+   "grid0": [
+    2093,
+    5118
+   ],
+   "pos_px": 22434774,
+   "neg_px": 73211985,
+   "ink_outside_sup_px": 235068,
+   "valid_px": 3921393200,
+   "fetch_s": 23.4,
+   "g3": {
+    "dice_pos": 0.9950624225664072,
+    "dice_neg": 0.9969204475901596,
+    "pass": true
+   },
+   "n_label": 160,
+   "n_N1": 160,
+   "n_heldout": 320,
+   "n_old": {
+    "label": 40,
+    "N1_nonlabel": 40
+   },
+   "n_new": {
+    "label": 120,
+    "N1_nonlabel": 120
+   },
+   "points_per_site_median": {
+    "label": 283.0,
+    "N1_nonlabel": 289.0
+   },
+   "s1_fold_pass": true
+  },
+  "w028": {
+   "shape0": [
+    37420,
+    30340
+   ],
+   "grid0": [
+    1871,
+    1517
+   ],
+   "pos_px": 5238851,
+   "neg_px": 14656356,
+   "ink_outside_sup_px": 129992,
+   "valid_px": 971934000,
+   "fetch_s": 8.6,
+   "g3": {
+    "dice_pos": 0.9947998840349727,
+    "dice_neg": 0.9962102180638454,
+    "pass": true
+   },
+   "n_label": 160,
+   "n_N1": 160,
+   "n_heldout": 320,
+   "n_old": {
+    "label": 40,
+    "N1_nonlabel": 40
+   },
+   "n_new": {
+    "label": 120,
+    "N1_nonlabel": 120
+   },
+   "points_per_site_median": {
+    "label": 260.5,
+    "N1_nonlabel": 289.0
+   },
+   "s1_fold_pass": true
+  },
+  "w029": {
+   "shape0": [
+    38000,
+    31320
+   ],
+   "grid0": [
+    1900,
+    1566
+   ],
+   "pos_px": 7015439,
+   "neg_px": 18427188,
+   "ink_outside_sup_px": 1737,
+   "valid_px": 1010641200,
+   "fetch_s": 9.9,
+   "g3": {
+    "dice_pos": 0.9943543122002687,
+    "dice_neg": 0.9956150244843706,
+    "pass": true
+   },
+   "n_label": 160,
+   "n_N1": 160,
+   "n_heldout": 320,
+   "n_old": {
+    "label": 40,
+    "N1_nonlabel": 40
+   },
+   "n_new": {
+    "label": 120,
+    "N1_nonlabel": 120
+   },
+   "points_per_site_median": {
+    "label": 281.5,
+    "N1_nonlabel": 289.0
+   },
+   "s1_fold_pass": true
+  },
+  "w031": {
+   "shape0": [
+    37480,
+    32180
+   ],
+   "grid0": [
+    1874,
+    1609
+   ],
+   "pos_px": 12365596,
+   "neg_px": 39137059,
+   "ink_outside_sup_px": 1380152,
+   "valid_px": 920091600,
+   "fetch_s": 14.1,
+   "g3": {
+    "dice_pos": 0.99320330357974,
+    "dice_neg": 0.9958114526460827,
+    "pass": true
+   },
+   "n_label": 160,
+   "n_N1": 160,
+   "n_heldout": 320,
+   "n_old": {
+    "label": 40,
+    "N1_nonlabel": 40
+   },
+   "n_new": {
+    "label": 120,
+    "N1_nonlabel": 120
+   },
+   "points_per_site_median": {
+    "label": 275.5,
+    "N1_nonlabel": 289.0
+   },
+   "s1_fold_pass": true
+  }
+ },
+ "S1": {
+  "rule": ">= 300 held-out sites on >= 4 of 6 folds",
+  "n_folds_pass": 6,
+  "pass_": true
+ },
+ "G3": {
+  "rule": "Dice >= 0.90 per class per segment",
+  "pass_": true
+ },
+ "rules": {
+  "BOX": 64,
+  "STRIDE": 8,
+  "SP": 129,
+  "N_OLD": 40,
+  "N_NEW": 120,
+  "seeds": [
+   2578,
+   2579
+  ]
+ }
+}

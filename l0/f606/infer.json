@@ -1,0 +1,56 @@
+{
+ "fold": "w029",
+ "replay": {
+  "D12s0": 0.0,
+  "D24s1": 0.0
+ },
+ "replay_sites": {
+  "points_0": true,
+  "points_1": true,
+  "points_2": true,
+  "points_3": true,
+  "points_320": true,
+  "points_321": true,
+  "points_322": true,
+  "points_323": true,
+  "points_640": true,
+  "points_641": true,
+  "points_642": true,
+  "points_643": true,
+  "points_960": true,
+  "points_961": true,
+  "points_962": true,
+  "points_963": true,
+  "points_1280": true,
+  "points_1281": true,
+  "points_1282": true,
+  "points_1283": true,
+  "points_1600": true,
+  "points_1601": true,
+  "points_1602": true,
+  "points_1603": true,
+  "tile_1283": true,
+  "tile_1282": true,
+  "tile_1280": true,
+  "tile_1281": true
+ },
+ "registered": {
+  "D12s0": true,
+  "D24s1": true
+ },
+ "done": true,
+ "not_run": false,
+ "smoke": 0,
+ "seconds": 2063.8,
+ "windows": 1280,
+ "sites": 320,
+ "nets": [
+  "D12s0",
+  "D24s1"
+ ],
+ "replay_tol": 0.005,
+ "total_seconds": 2079.5,
+ "cap_h": 2.0,
+ "data": "$LABELJ_DATA/ves3663/run",
+ "gpu": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition"
+}

@@ -29,6 +29,15 @@ SCROLLS = {
 RUNS = ('J0', 'J1', 'D0', 'D1')
 
 
+def missing_input(prog, e):
+    """Stop with a message, not a traceback, when a stored input is missing (VES-3977 audit defect 5)."""
+    sys.exit(f"{prog}: missing input {e.filename}\n"
+             "  PHerc. 1667 w028: fetch and unpack the stored outputs first (README, section \"Run without a GPU\":\n"
+             "  vesuvius-label-j-1667-w028-stored.tar.gz, unpacked in the repository root).\n"
+             "  Other segments and PHerc. 0139: their stored outputs are not published; build the data folders with the\n"
+             "  steps in the README (section \"Reproduce one held-out segment on one GPU\").")
+
+
 def pick_fold(res):
     """P3: fold with the median stored L_J; even count -> the higher of the two middle folds."""
     order = sorted(res['folds'], key=lambda f: res['folds'][f]['L_J'])
@@ -110,4 +119,7 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    try:
+        main()
+    except FileNotFoundError as e:
+        missing_input('depth_profile', e)
